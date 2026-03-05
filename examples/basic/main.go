@@ -6,7 +6,7 @@ import (
 	"log"
 	"time"
 
-	cronengine "github.com/bimonugraraga/radobaan-cron-engine/radobaan-cron-engine"
+	cronengine "github.com/bimonugraraga/radobaan-cron-engine"
 	"github.com/redis/go-redis/v9"
 )
 
