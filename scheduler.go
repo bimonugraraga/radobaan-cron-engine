@@ -1,8 +1,6 @@
 package cronengine
 
 import (
-	"log"
-
 	"github.com/redis/go-redis/v9"
 	"github.com/robfig/cron/v3"
 )
@@ -53,11 +51,9 @@ func (s *Scheduler) Schedule(params SchedulerRequest) error {
 		})
 
 		if err != nil {
-			log.Printf("failed to acquire lock: %v", err)
 			return
 		}
 		if !ok {
-			log.Printf("lock was filled for %s", params.Target)
 			return
 		}
 		params.Func()

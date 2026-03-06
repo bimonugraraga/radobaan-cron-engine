@@ -49,7 +49,6 @@ func (l *Lock) Acquire(params LockRequest) (bool, error) {
 	if err != nil {
 		return false, err
 	}
-	fmt.Println(res, "acquire lock result", params.Req.Target, params.Req.Usecase)
 	if res == 0 {
 		return false, nil
 	}
